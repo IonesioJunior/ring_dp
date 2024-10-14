@@ -9,7 +9,7 @@ class RingRunner:
     def __init__(self):
         self.client_config = Client.load()
         self.my_email = self.client_config["email"]
-        self.my_home = Path(self.client_config.datasite_path) / "app_pipelines" / "ring"
+        self.my_home = Path(self.client_config.datasite_path) / "app_pipelines" / "ring_dp"
 
         self.permission = SyftPermission.mine_with_public_write(
             self.client_config.email
@@ -85,7 +85,7 @@ class RingRunner:
             Path(self.client_config.sync_folder)
             / to_send_email
             / "app_pipelines"
-            / "ring"
+            / "ring_dp"
             / "running"
             / "data.json"
         )
